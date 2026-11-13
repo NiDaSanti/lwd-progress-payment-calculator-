@@ -44,6 +44,26 @@ export default defineConfig([
 
 ```
 
+## Deploy to Netlify
+
+This project is configured for Netlify with `netlify.toml`:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- SPA redirect: `/* -> /index.html` (200)
+
+### Git-based deployment (recommended)
+
+1. Push this repo to GitHub.
+2. In Netlify, choose **Add new site** → **Import an existing project**.
+3. Connect GitHub and select this repository.
+4. Netlify should auto-detect settings from `netlify.toml`; deploy.
+
+### Optional manual deploy
+
+- Build locally: `npm run build`
+- Drag and drop the generated `dist/` folder in Netlify UI.
+
 You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
@@ -73,4 +93,3 @@ export default defineConfig([
 ])
 
 ```
-# lwd-progress-payment-calculator-
