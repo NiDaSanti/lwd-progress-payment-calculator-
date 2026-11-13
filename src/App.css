@@ -6,6 +6,7 @@
   --g-text: #0d2149;
   --g-muted: #5f6368;
   --g-border: rgba(13, 33, 73, 0.16);
+  --g-border-strong: rgba(13, 33, 73, 0.32);
   --g-surface: #ffffff;
   --g-surface-2: #f0f2f6;
 
@@ -109,7 +110,7 @@ input {
 }
 
 input:hover {
-  border-color: rgba(13, 33, 73, 0.32);
+  border-color: var(--g-border-strong);
 }
 
 input:focus-visible {
@@ -256,6 +257,37 @@ input:focus-visible {
 
 .warning-text {
   color: #ed6c02;
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-shell {
+    --g-primary: #d8e2ff;
+    --g-primary-soft: rgba(122, 154, 234, 0.22);
+    --g-accent: #8aa8ff;
+    --g-accent-light: #b6c8ff;
+    --g-text: #eef2ff;
+    --g-muted: #b2bbd3;
+    --g-border: rgba(174, 196, 255, 0.2);
+    --g-border-strong: rgba(174, 196, 255, 0.42);
+    --g-surface: #131b2d;
+    --g-surface-2: #1a2438;
+  }
+
+  .panel {
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.34);
+  }
+
+  .row-metrics {
+    border-top: 1px solid rgba(174, 196, 255, 0.24);
+  }
+
+  .error-text {
+    color: #ff8f8f;
+  }
+
+  .warning-text {
+    color: #ffbf66;
+  }
 }
 
 @media (max-width: 980px) {
